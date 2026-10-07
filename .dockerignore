@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+build
+docs
+README.md
+app/untitled.html
+.git
+Dockerfile
+docker-compose.yml

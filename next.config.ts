@@ -1,5 +1,8 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {};
+const nextConfig: NextConfig = {
+  // Slim, self-contained server bundle for the Docker runner stage
+  output: "standalone",
+};
 
 export default nextConfig;
