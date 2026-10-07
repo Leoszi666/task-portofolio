@@ -1,0 +1,458 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<title>Teguh Ilham Saputra</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #FAFAFA;
+        color: #111111;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            paper: "#FAFAFA",
+            ink: "#111111",
+            "ink-secondary": "rgba(17,17,17,0.65)",
+            "ink-tertiary": "rgba(17,17,17,0.45)",
+            "ink-hairline": "rgba(17,17,17,0.12)",
+            "ink-subtle": "rgba(17,17,17,0.04)"
+          },
+          borderRadius: {
+            DEFAULT: "8px",
+            lg: "8px",
+            xl: "8px",
+            full: "9999px"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-paper font-sans text-ink antialiased selection:bg-ink selection:text-paper min-h-screen flex flex-col justify-between">
+<a class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-paper focus:text-ink focus:border focus:border-ink focus:rounded-[8px] font-sans text-xs uppercase tracking-wider font-semibold" href="#main-content">
+    Skip to content
+  </a>
+<!-- Header -->
+<header class="sticky top-0 z-40 w-full bg-paper/95 backdrop-blur-none border-b border-ink-hairline">
+<div class="max-w-[1080px] mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
+<a class="font-semibold text-[17px] tracking-tight text-ink flex items-center gap-2 group" href="#home">
+<span class="inline-block w-2 h-2 rounded-full bg-ink"></span>
+<span class="tracking-tight">&lt;logo&gt;</span>
+
+</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8 text-[14px]">
+<a aria-current="page" class="font-medium transition-colors duration-150 py-1 text-ink-secondary" data-path="about" href="#about">About</a>
+<a class="font-medium hover:text-ink transition-colors duration-150 py-1 text-ink-secondary" data-path="skills" href="#skills">Skills</a>
+<a class="font-medium hover:text-ink transition-colors duration-150 py-1 text-ink-secondary" data-path="projects" href="#projects">Projects</a>
+<a class="font-medium hover:text-ink transition-colors duration-150 py-1 text-ink font-semibold" data-path="contact" href="#contact">Contact</a>
+</nav>
+<!-- Desktop Actions -->
+<div class="hidden md:flex items-center gap-4"><button aria-label="Toggle color theme" class="inline-flex items-center justify-center gap-1.5 h-9 px-3 text-xs font-semibold uppercase tracking-wider text-ink border border-ink-hairline rounded-[8px] hover:border-ink hover:bg-ink-subtle transition-all duration-150" type="button"><span class="material-symbols-outlined text-[16px]">light_mode</span><span class="text-[11px]">LIGHT</span></button></div>
+<!-- Mobile Button -->
+<div class="flex md:hidden items-center gap-3"><button type="button" id="mobile-theme-toggle" class="inline-flex items-center justify-center h-8 px-2.5 text-[11px] font-semibold uppercase tracking-wider text-ink border border-ink-hairline rounded-[8px] hover:bg-ink-subtle transition-colors" aria-label="Toggle dark or light mode">TERANG / GELAP</button>
+<a class="inline-flex items-center justify-center h-8 px-3 text-[11px] font-semibold uppercase tracking-wider text-ink border border-ink-hairline rounded-[8px]" download="" href="/cv/Teguh-Ilham-Saputra-CV.pdf">
+          CV
+        </a>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu" class="p-1.5 text-ink border border-ink-hairline rounded-[8px] focus:outline-none" id="mobile-nav-toggle" type="button">
+<span class="material-symbols-outlined text-[20px]">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Nav Menu -->
+<div class="hidden md:hidden border-t border-ink-hairline bg-paper px-5 py-4" id="mobile-menu">
+<nav class="flex flex-col gap-3 text-sm">
+<a class="py-1 border-b border-ink-hairline/40 text-ink-secondary" data-path="about" href="#about">About</a>
+<a class="font-normal hover:text-ink py-1 border-b border-ink-hairline/40 text-ink-secondary" data-path="skills" href="#skills">Skills</a>
+<a class="font-normal hover:text-ink py-1 border-b border-ink-hairline/40 text-ink-secondary" data-path="projects" href="#projects">Projects</a>
+<a class="font-normal hover:text-ink py-1 text-ink font-semibold" data-path="contact" href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+<!-- Main Content -->
+<main class="w-full flex-1" id="main-content">
+<div class="max-w-[1080px] mx-auto px-5 md:px-8">
+<!-- 01 / HERO SECTION -->
+<section aria-labelledby="hero-heading" class="scroll-mt-16 pt-16 md:pt-24 pb-16 md:pb-20 border-b border-ink-hairline flex flex-col justify-center" id="home">
+<!-- Section Tracker Tag -->
+
+<div class="max-w-[780px]">
+<h1 class="text-[44px] md:text-[64px] font-semibold tracking-[-0.03em] leading-[1.05] text-ink mb-6" id="hero-heading">
+            Teguh Ilham Saputra
+          </h1>
+<p class="text-[19px] md:text-[22px] font-normal leading-[1.35] text-ink-secondary tracking-[-0.01em] mb-6">
+            Computer Science Student <span class="text-ink-tertiary">|</span> Cloud &amp; Network Operations Enthusiast
+          </p>
+<p class="text-[16px] md:text-[17px] font-normal text-ink-secondary max-w-[620px] leading-[1.65] mb-8">
+            Focus on hybrid cloud architecture and infrastructure automation. Building dependable systems through disciplined network design and automated provisioning.
+          </p>
+<div class="flex flex-wrap items-center gap-3">
+<a class="inline-flex items-center justify-center gap-2 h-11 px-6 bg-ink text-paper rounded-[8px] text-[13px] font-semibold uppercase tracking-wider hover:opacity-90 transition-opacity" href="#projects">
+<span class="">Lihat Proyek</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 h-11 px-6 bg-paper text-ink border border-ink-hairline rounded-[8px] text-[13px] font-semibold uppercase tracking-wider hover:border-ink hover:bg-ink-subtle transition-all" download="" href="/cv/Teguh-Ilham-Saputra-CV.pdf">
+<span class="">Download CV</span>
+<span class="material-symbols-outlined text-[16px]">download</span>
+</a>
+</div>
+</div>
+<!-- Editorial Telemetry Bar / Info Strip (Panvera Style) -->
+<div class="mt-14 py-6 border-t border-b border-ink-hairline grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 text-left">
+<div class="flex flex-col">
+<span class="text-[11px] font-semibold tracking-[0.08em] uppercase text-ink-tertiary mb-1">Specialization</span>
+<span class="text-[14px] font-medium text-ink">DevOps &amp; Network Operation</span>
+</div>
+<div class="flex flex-col sm:border-l sm:border-ink-hairline sm:pl-8">
+<span class="text-[11px] font-semibold tracking-[0.08em] uppercase text-ink-tertiary mb-1">Affiliation</span>
+<span class="text-[14px] font-medium text-ink">BINUS University (GPA 3.45)</span>
+</div>
+</div>
+</section>
+<!-- 02 / ABOUT SECTION -->
+<section aria-labelledby="about-heading" class="scroll-mt-16 py-16 md:py-24 border-b border-ink-hairline" id="about">
+<!-- Section Header -->
+<div class="flex items-baseline justify-between mb-8">
+<div>
+
+<h2 class="text-[28px] md:text-[36px] font-semibold tracking-[-0.02em] text-ink" id="about-heading">
+              About
+            </h2>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-14">
+<!-- Overview text column -->
+<div class="lg:col-span-5 flex flex-col justify-start">
+<p class="text-[17px] md:text-[18px] text-ink font-normal leading-[1.65] mb-6">
+              Computer science student dedicated to network routing optimization and secure remote access architectures. Experienced in structuring scalable cloud infrastructure, virtualized systems, and resilient environments.
+            </p>
+
+</div>
+<!-- Panvera-Style Timeline / Step Architecture -->
+<div class="lg:col-span-7 flex flex-col gap-4">
+<!-- Timeline Item 1 -->
+<div class="p-6 md:p-7 border border-ink-hairline rounded-[8px] bg-paper hover:border-ink transition-colors">
+<div class="flex items-start justify-between gap-4 mb-2">
+<div class="flex items-center gap-2">
+<span class="text-[11px] font-semibold tracking-[0.08em] uppercase text-ink-tertiary">EDUCATION</span>
+<span class="text-ink-tertiary">·</span>
+<span class="text-[12px] font-medium text-ink-secondary">Sept 2024 to Present</span>
+</div>
+<span class="text-[11px] font-semibold tracking-wider px-2 py-0.5 border border-ink-hairline rounded-[8px] text-ink">ACTIVE</span>
+</div>
+<h3 class="text-[19px] md:text-[20px] font-semibold text-ink tracking-tight mb-1">
+                BINUS University
+              </h3>
+<p class="text-[14px] text-ink-secondary leading-[1.5]">
+                Computer Science, GPA 3.45
+              </p>
+</div>
+<!-- Timeline Item 2 -->
+<div class="p-6 md:p-7 border border-ink-hairline rounded-[8px] bg-paper hover:border-ink transition-colors">
+<div class="flex items-start justify-between gap-4 mb-2">
+<div class="flex items-center gap-2">
+<span class="text-[11px] font-semibold tracking-[0.08em] uppercase text-ink-tertiary">EXPERIENCE</span>
+<span class="text-ink-tertiary">·</span>
+<span class="text-[12px] font-medium text-ink-secondary">2024</span>
+</div>
+<span class="text-[11px] font-semibold tracking-wider px-2 py-0.5 border border-ink-hairline rounded-[8px] text-ink">ON-GOING</span>
+</div>
+<h3 class="text-[19px] md:text-[20px] font-semibold text-ink tracking-tight mb-1">
+                AWS re/START Program&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</h3>
+<p class="text-[14px] text-ink-secondary leading-[1.5]">AWS Cloud Services, Network, and Operations&nbsp;</p>
+</div>
+<!-- Timeline Item 3 -->
+<div class="p-6 md:p-7 border border-ink-hairline rounded-[8px] bg-paper hover:border-ink transition-colors">
+<div class="flex items-start justify-between gap-4 mb-2">
+<div class="flex items-center gap-2">
+<span class="text-[11px] font-semibold tracking-[0.08em] uppercase text-ink-tertiary">CERTIFICATION</span>
+<span class="text-ink-tertiary">·</span>
+<span class="text-[12px] font-medium text-ink-secondary">2024</span>
+</div>
+<span class="text-[11px] font-semibold tracking-wider px-2 py-0.5 border border-ink-hairline rounded-[8px] text-ink">CREDENTIAL</span>
+</div>
+<h3 class="text-[19px] md:text-[20px] font-semibold text-ink tracking-tight mb-1">
+                Google Cloud Computing Foundations
+              </h3>
+<p class="text-[14px] text-ink-secondary leading-[1.5]">
+                Infrastructure core services, networking, and cloud storage.
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 03 / SKILLS SECTION (Panvera Architectural Row Structure) -->
+<section aria-labelledby="skills-heading" class="scroll-mt-16 py-16 md:py-24 border-b border-ink-hairline" id="skills">
+<!-- Section Header -->
+<div class="flex items-baseline justify-between mb-8">
+<div>
+
+<h2 class="text-[28px] md:text-[36px] font-semibold tracking-[-0.02em] text-ink" id="skills-heading">
+              Skills
+            </h2>
+</div>
+</div>
+<!-- Architectural Rows inspired by Panvera Service breakdown -->
+<div class="flex flex-col border-t border-ink-hairline">
+<!-- Row 1 -->
+<div class="py-7 md:py-8 border-b border-ink-hairline grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 items-start hover:bg-ink-subtle transition-colors px-2 md:px-4 rounded-[8px]">
+<div class="md:col-span-1 text-[13px] font-semibold text-ink-tertiary tracking-tight">01</div>
+<div class="md:col-span-4">
+<h3 class="text-[17px] font-semibold text-ink tracking-tight mb-1">Cloud &amp; Virtualization</h3>
+<p class="text-[13px] text-ink-secondary">Infrastructure provisioning and hypervisor architecture</p>
+</div>
+<div class="md:col-span-7 flex flex-wrap gap-2 items-center md:justify-end">
+<span class="inline-flex items-center px-3 py-1 rounded-[8px] border border-ink-hairline bg-paper text-[13px] font-medium text-ink">AWS</span>
+<span class="inline-flex items-center px-3 py-1 rounded-[8px] border border-ink-hairline bg-paper text-[13px] font-medium text-ink">GCP</span>
+<span class="inline-flex items-center px-3 py-1 rounded-[8px] border border-ink-hairline bg-paper text-[13px] font-medium text-ink">Proxmox VE</span>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="py-7 md:py-8 border-b border-ink-hairline grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 items-start hover:bg-ink-subtle transition-colors px-2 md:px-4 rounded-[8px]">
+<div class="md:col-span-1 text-[13px] font-semibold text-ink-tertiary tracking-tight">02</div>
+<div class="md:col-span-4">
+<h3 class="text-[17px] font-semibold text-ink tracking-tight mb-1">Networking</h3>
+<p class="text-[13px] text-ink-secondary">Subnet topologies, isolation, and gateway routing</p>
+</div>
+<div class="md:col-span-7 flex flex-wrap gap-2 items-center md:justify-end">
+<span class="inline-flex items-center px-3 py-1 rounded-[8px] border border-ink-hairline bg-paper text-[13px] font-medium text-ink">VPC Management</span>
+<span class="inline-flex items-center px-3 py-1 rounded-[8px] border border-ink-hairline bg-paper text-[13px] font-medium text-ink">Cloud Routing</span>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="py-7 md:py-8 border-b border-ink-hairline grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 items-start hover:bg-ink-subtle transition-colors px-2 md:px-4 rounded-[8px]">
+<div class="md:col-span-1 text-[13px] font-semibold text-ink-tertiary tracking-tight">03</div>
+<div class="md:col-span-4">
+<h3 class="text-[17px] font-semibold text-ink tracking-tight mb-1">Programming</h3>
+<p class="text-[13px] text-ink-secondary">Core algorithms, systems scripting, and application development</p>
+</div>
+<div class="md:col-span-7 flex flex-wrap gap-2 items-center md:justify-end">
+<span class="inline-flex items-center px-3 py-1 rounded-[8px] border border-ink-hairline bg-paper text-[13px] font-medium text-ink">C++</span>
+<span class="inline-flex items-center px-3 py-1 rounded-[8px] border border-ink-hairline bg-paper text-[13px] font-medium text-ink">Java</span>
+<span class="inline-flex items-center px-3 py-1 rounded-[8px] border border-ink-hairline bg-paper text-[13px] font-medium text-ink">PHP</span>
+<span class="inline-flex items-center px-3 py-1 rounded-[8px] border border-ink-hairline bg-paper text-[13px] font-medium text-ink">Kotlin</span>
+</div>
+</div>
+<!-- Row 4 -->
+<div class="py-7 md:py-8 border-b border-ink-hairline grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 items-start hover:bg-ink-subtle transition-colors px-2 md:px-4 rounded-[8px]">
+<div class="md:col-span-1 text-[13px] font-semibold text-ink-tertiary tracking-tight">04</div>
+<div class="md:col-span-4">
+<h3 class="text-[17px] font-semibold text-ink tracking-tight mb-1">Web / Database</h3>
+<p class="text-[13px] text-ink-secondary">Relational databases, API endpoints, and fullstack frameworks</p>
+</div>
+<div class="md:col-span-7 flex flex-wrap gap-2 items-center md:justify-end">
+<span class="inline-flex items-center px-3 py-1 rounded-[8px] border border-ink-hairline bg-paper text-[13px] font-medium text-ink">Next.js</span>
+<span class="inline-flex items-center px-3 py-1 rounded-[8px] border border-ink-hairline bg-paper text-[13px] font-medium text-ink">Laravel</span>
+<span class="inline-flex items-center px-3 py-1 rounded-[8px] border border-ink-hairline bg-paper text-[13px] font-medium text-ink">MySQL</span>
+<span class="inline-flex items-center px-3 py-1 rounded-[8px] border border-ink-hairline bg-paper text-[13px] font-medium text-ink">PostgreSQL</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 04 / PROJECTS SECTION (Panvera-Style Card Anatomy) -->
+<section aria-labelledby="projects-heading" class="scroll-mt-16 py-16 md:py-24 border-b border-ink-hairline" id="projects">
+<!-- Section Header -->
+<div class="flex items-baseline justify-between mb-8">
+<div>
+
+<h2 class="text-[28px] md:text-[36px] font-semibold tracking-[-0.02em] text-ink" id="projects-heading">
+              Projects
+            </h2>
+</div>
+</div>
+<!-- Refined Editorial Cards: 28px/32px padding, Hairline borders, Strong anatomy -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+<!-- Project Card 01 -->
+<article class="flex flex-col p-7 md:p-8 border border-ink-hairline rounded-[8px] bg-paper hover:border-ink transition-colors duration-150">
+<!-- Media 16:9 slot -->
+<div class="w-full aspect-video border border-dashed border-ink-hairline rounded-[8px] flex flex-col items-center justify-center mb-6 bg-ink-subtle">
+<span class="material-symbols-outlined text-[24px] text-ink-tertiary mb-1">dashboard_customize</span>
+<span class="text-[12px] uppercase tracking-wider font-medium text-ink-secondary">Media 16:9</span>
+</div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-[11px] font-semibold tracking-[0.08em] uppercase text-ink-tertiary">PROJECT 01</span>
+<span class="text-[11px] font-medium text-ink-tertiary">SYSTEM ARCHITECTURE</span>
+</div>
+<h3 class="text-[22px] font-semibold text-ink tracking-tight mb-2">
+              Placeholder Project
+            </h3>
+<p class="text-[15px] text-ink-secondary mb-6 leading-[1.6]">
+              Project description placeholder outlining problem statement and technical architecture solution.
+            </p>
+<!-- Tags -->
+<div class="flex flex-wrap gap-2 mb-8 mt-auto">
+<span class="inline-flex items-center h-7 px-3 rounded-[8px] border border-ink-hairline bg-paper text-[12px] font-medium text-ink">Architecture</span>
+<span class="inline-flex items-center h-7 px-3 rounded-[8px] border border-ink-hairline bg-paper text-[12px] font-medium text-ink">Cloud</span>
+<span class="inline-flex items-center h-7 px-3 rounded-[8px] border border-ink-hairline bg-paper text-[12px] font-medium text-ink">Automation</span>
+</div>
+<!-- Footer divider with Link indicators -->
+<div class="flex items-center justify-between pt-4 border-t border-ink-hairline text-[13px]">
+<a aria-label="View source on GitHub for Project 01" class="inline-flex items-center gap-1.5 font-semibold text-ink hover:opacity-75 transition-opacity" href="#">
+<span class="">GitHub</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[15px]">arrow_outward</span>
+</a>
+<span class="text-[12px] text-ink-tertiary">Repository</span>
+</div>
+</article>
+<!-- Project Card 02 -->
+<article class="flex flex-col p-7 md:p-8 border border-ink-hairline rounded-[8px] bg-paper hover:border-ink transition-colors duration-150">
+<!-- Media 16:9 slot -->
+<div class="w-full aspect-video border border-dashed border-ink-hairline rounded-[8px] flex flex-col items-center justify-center mb-6 bg-ink-subtle">
+<span class="material-symbols-outlined text-[24px] text-ink-tertiary mb-1">dns</span>
+<span class="text-[12px] uppercase tracking-wider font-medium text-ink-secondary">Media 16:9</span>
+</div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-[11px] font-semibold tracking-[0.08em] uppercase text-ink-tertiary">PROJECT 02</span>
+<span class="text-[11px] font-medium text-ink-tertiary">CLOUD INFRASTRUCTURE</span>
+</div>
+<h3 class="text-[22px] font-semibold text-ink tracking-tight mb-2">
+              Placeholder Project
+            </h3>
+<p class="text-[15px] text-ink-secondary mb-6 leading-[1.6]">
+              Project description placeholder outlining problem statement and technical architecture solution.
+            </p>
+<!-- Tags -->
+<div class="flex flex-wrap gap-2 mb-8 mt-auto">
+<span class="inline-flex items-center h-7 px-3 rounded-[8px] border border-ink-hairline bg-paper text-[12px] font-medium text-ink">Architecture</span>
+<span class="inline-flex items-center h-7 px-3 rounded-[8px] border border-ink-hairline bg-paper text-[12px] font-medium text-ink">Cloud</span>
+<span class="inline-flex items-center h-7 px-3 rounded-[8px] border border-ink-hairline bg-paper text-[12px] font-medium text-ink">Automation</span>
+</div>
+<!-- Footer divider with Link indicators -->
+<div class="flex items-center justify-between pt-4 border-t border-ink-hairline text-[13px]">
+<a aria-label="View source on GitHub for Project 02" class="inline-flex items-center gap-1.5 font-semibold text-ink hover:opacity-75 transition-opacity" href="#">
+<span class="">GitHub</span>
+<span aria-hidden="true" class="material-symbols-outlined text-[15px]">arrow_outward</span>
+</a>
+<span class="text-[12px] text-ink-tertiary">Repository</span>
+</div>
+</article>
+</div>
+</section>
+<!-- 05 / CONTACT SECTION (Panvera-Inspired Structured Architectural Box) -->
+<section aria-labelledby="contact-heading" class="scroll-mt-16 py-16 md:py-24" id="contact">
+<div class="p-8 md:p-12 border border-ink-hairline rounded-[8px] bg-paper">
+
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<div class="md:col-span-7">
+<h2 class="text-[32px] md:text-[44px] font-semibold tracking-[-0.03em] text-ink mb-4" id="contact-heading">
+                Contact
+              </h2>
+<p class="text-[17px] text-ink-secondary leading-[1.6] max-w-[480px]">
+                Open to internship opportunities and project collaboration.
+              </p>
+</div>
+<div class="md:col-span-5 flex flex-col gap-4 md:border-l md:border-ink-hairline md:pl-8">
+<div class="flex flex-col">
+<span class="text-[11px] font-semibold tracking-[0.08em] uppercase text-ink-tertiary mb-1">Email</span>
+<a class="text-[16px] font-semibold text-ink hover:underline flex items-center justify-between group" href="mailto:teguh4930@gmail.com">
+<span class="">teguh4930@gmail.com</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="h-px bg-ink-hairline w-full my-1"></div>
+<div class="flex flex-col">
+<span class="text-[11px] font-semibold tracking-[0.08em] uppercase text-ink-tertiary mb-1">LinkedIn</span>
+<a class="text-[16px] font-semibold text-ink hover:underline flex items-center justify-between group" href="https://linkedin.com/in/teguh-ilham-saputra" rel="noopener noreferrer" target="_blank">
+<span class="">linkedin.com/in/teguh-ilham-saputra</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-paper border-t border-ink-hairline py-8">
+<div class="max-w-[1080px] mx-auto px-5 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px] text-ink-secondary">
+
+<a class="inline-flex items-center gap-1.5 font-medium text-ink hover:text-ink-secondary transition-colors" href="#home">
+<span class="">Back to top</span>
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+</a>
+</div>
+</footer>
+<!-- Interactive Scripts -->
+<script>
+    (function () {
+      const toggle = document.getElementById('mobile-nav-toggle');
+      const menu = document.getElementById('mobile-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function () {
+          const expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', !expanded);
+          menu.classList.toggle('hidden');
+        });
+      }
+
+      // Scroll Spy for Nav
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('header nav a[data-path]');
+      if (!sections.length || !navLinks.length) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const currentId = entry.target.getAttribute('id');
+              navLinks.forEach((link) => {
+                const linkPath = link.getAttribute('data-path');
+                if (linkPath === currentId) {
+                  link.classList.remove('text-ink-secondary');
+                  link.classList.add('text-ink', 'font-semibold');
+                } else {
+                  link.classList.remove('text-ink', 'font-semibold');
+                  link.classList.add('text-ink-secondary');
+                }
+              });
+            }
+          });
+        },
+        {
+          rootMargin: '-20% 0px -70% 0px',
+          threshold: 0,
+        }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+    })();
+  </script>
+
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+/* The sketch is a reference only — never scan it for utility classes */
+@source not "./untitled.html";
+
+@theme {
+  /* Two-color rule: wipe Tailwind's default palette, expose paper/ink only.
+     Every other value is --color-ink at reduced opacity via the /<alpha> syntax. */
+  --color-*: initial;
+  --color-paper: #FAFAFA;
+  --color-ink: #111111;
+
+  /* One radius: named radius utilities are disabled; use rounded-[8px] */
+  --radius-*: initial;
+
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+/* Dark mode (user-approved): swap the two tokens; every utility recomputes */
+.dark {
+  --color-paper: #111111;
+  --color-ink: #FAFAFA;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 64px;
+}
+
+::selection {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* Sticky bento deck (Phase 4, user-approved): project cards pin under the 64px navbar */
+.bento-card {
+  position: sticky;
+}
+
+/* Hero entrance reveal (Phase 4, user-approved): one-time staggered fade-up on load */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: rise 0.5s ease-out both;
+}
+
+.reveal-1 {
+  animation-delay: 0ms;
+}
+
+.reveal-2 {
+  animation-delay: 120ms;
+}
+
+.reveal-3 {
+  animation-delay: 240ms;
+}
+
+.reveal-4 {
+  animation-delay: 360ms;
+}
+
+.reveal-5 {
+  animation-delay: 480ms;
+}
+
+.reveal-6 {
+  animation-delay: 600ms;
+}
+
+/* Gentle float for the scattered hero words (user-approved exception):
+   ±6px vertical drift, phase-offset per word; layered under the reveal */
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(-6px);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.drift {
+  animation: drift 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  ::before,
+  ::after {
+    transition-duration: 0ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .bento-card {
+    position: static;
+  }
+
+  .reveal {
+    animation: none;
+  }
+
+  .drift {
+    animation: none;
+  }
+}
