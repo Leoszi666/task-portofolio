@@ -37,7 +37,6 @@ app/          # Next.js App Router pages, layout, design tokens (globals.css), f
 components/   # Navbar, Hero, About, Skills, ProjectGrid, ProjectCard, Contact, Footer + ui/ primitives
 data/         # Content source of truth (site.ts, projects.ts)
 public/cv/    # ATS-formatted CV (PDF)
-docs/         # Design rulebook (not tracked in git)
 ```
 
 ## Features
